@@ -7,15 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E32CBC526F7FA5A007CFD49 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32CBC426F7FA5A007CFD49 /* CellModel.swift */; };
+		3E32CBD526F7FE19007CFD49 /* ImageScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32CBC926F7FE19007CFD49 /* ImageScreenContract.swift */; };
+		3E32CBD626F7FE19007CFD49 /* ImageScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32CBCB26F7FE19007CFD49 /* ImageScreenAssembly.swift */; };
+		3E32CBD726F7FE19007CFD49 /* ImageScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32CBCD26F7FE19007CFD49 /* ImageScreenPresenter.swift */; };
+		3E32CBD826F7FE19007CFD49 /* ImageScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32CBCE26F7FE19007CFD49 /* ImageScreenDataSource.swift */; };
+		3E32CBD926F7FE19007CFD49 /* ImageScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32CBD026F7FE19007CFD49 /* ImageScreenViewController.swift */; };
+		3E32CBDA26F7FE19007CFD49 /* ImageScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32CBD226F7FE19007CFD49 /* ImageScreenInteractor.swift */; };
+		3E32CBDB26F7FE19007CFD49 /* ImageScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32CBD426F7FE19007CFD49 /* ImageScreenRouter.swift */; };
 		3E90DFEB26F7A19F0039FB48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90DFEA26F7A19F0039FB48 /* AppDelegate.swift */; };
 		3E90DFED26F7A19F0039FB48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90DFEC26F7A19F0039FB48 /* SceneDelegate.swift */; };
 		3E90DFEF26F7A19F0039FB48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90DFEE26F7A19F0039FB48 /* ViewController.swift */; };
 		3E90DFF226F7A19F0039FB48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E90DFF026F7A19F0039FB48 /* Main.storyboard */; };
 		3E90DFF426F7A1A50039FB48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E90DFF326F7A1A50039FB48 /* Assets.xcassets */; };
 		3E90DFF726F7A1A50039FB48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E90DFF526F7A1A50039FB48 /* LaunchScreen.storyboard */; };
+		3E90E01B26F7A5B70039FB48 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90E00926F7A5B70039FB48 /* Cell.swift */; };
+		3E90E01C26F7A5B70039FB48 /* TableViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90E00B26F7A5B70039FB48 /* TableViewContract.swift */; };
+		3E90E01D26F7A5B70039FB48 /* GalleryContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90E00F26F7A5B70039FB48 /* GalleryContract.swift */; };
+		3E90E01E26F7A5B70039FB48 /* GalleryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90E01126F7A5B70039FB48 /* GalleryAssembly.swift */; };
+		3E90E01F26F7A5B70039FB48 /* GalleryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90E01326F7A5B70039FB48 /* GalleryDataSource.swift */; };
+		3E90E02026F7A5B70039FB48 /* GalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90E01426F7A5B70039FB48 /* GalleryPresenter.swift */; };
+		3E90E02126F7A5B70039FB48 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90E01626F7A5B70039FB48 /* GalleryViewController.swift */; };
+		3E90E02226F7A5B70039FB48 /* GalleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90E01826F7A5B70039FB48 /* GalleryInteractor.swift */; };
+		3E90E02326F7A5B70039FB48 /* GalleryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90E01A26F7A5B70039FB48 /* GalleryRouter.swift */; };
+		3E90E02626F7F86F0039FB48 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90E02526F7F86F0039FB48 /* SectionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E32CBC426F7FA5A007CFD49 /* CellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
+		3E32CBC926F7FE19007CFD49 /* ImageScreenContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScreenContract.swift; sourceTree = "<group>"; };
+		3E32CBCB26F7FE19007CFD49 /* ImageScreenAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScreenAssembly.swift; sourceTree = "<group>"; };
+		3E32CBCD26F7FE19007CFD49 /* ImageScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScreenPresenter.swift; sourceTree = "<group>"; };
+		3E32CBCE26F7FE19007CFD49 /* ImageScreenDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScreenDataSource.swift; sourceTree = "<group>"; };
+		3E32CBD026F7FE19007CFD49 /* ImageScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScreenViewController.swift; sourceTree = "<group>"; };
+		3E32CBD226F7FE19007CFD49 /* ImageScreenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScreenInteractor.swift; sourceTree = "<group>"; };
+		3E32CBD426F7FE19007CFD49 /* ImageScreenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScreenRouter.swift; sourceTree = "<group>"; };
 		3E90DFE726F7A19F0039FB48 /* SwiftPiscine.Day03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPiscine.Day03.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E90DFEA26F7A19F0039FB48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E90DFEC26F7A19F0039FB48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +50,16 @@
 		3E90DFF326F7A1A50039FB48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E90DFF626F7A1A50039FB48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E90DFF826F7A1A50039FB48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E90E00926F7A5B70039FB48 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		3E90E00B26F7A5B70039FB48 /* TableViewContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewContract.swift; sourceTree = "<group>"; };
+		3E90E00F26F7A5B70039FB48 /* GalleryContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryContract.swift; sourceTree = "<group>"; };
+		3E90E01126F7A5B70039FB48 /* GalleryAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryAssembly.swift; sourceTree = "<group>"; };
+		3E90E01326F7A5B70039FB48 /* GalleryDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDataSource.swift; sourceTree = "<group>"; };
+		3E90E01426F7A5B70039FB48 /* GalleryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryPresenter.swift; sourceTree = "<group>"; };
+		3E90E01626F7A5B70039FB48 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		3E90E01826F7A5B70039FB48 /* GalleryInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryInteractor.swift; sourceTree = "<group>"; };
+		3E90E01A26F7A5B70039FB48 /* GalleryRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryRouter.swift; sourceTree = "<group>"; };
+		3E90E02526F7F86F0039FB48 /* SectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +73,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E32CBC726F7FE19007CFD49 /* ImageScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3E32CBC826F7FE19007CFD49 /* Contract */,
+				3E32CBCA26F7FE19007CFD49 /* Assembly */,
+				3E32CBCC26F7FE19007CFD49 /* Presenter */,
+				3E32CBCF26F7FE19007CFD49 /* View */,
+				3E32CBD126F7FE19007CFD49 /* Interactor */,
+				3E32CBD326F7FE19007CFD49 /* Router */,
+			);
+			path = ImageScreen;
+			sourceTree = "<group>";
+		};
+		3E32CBC826F7FE19007CFD49 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				3E32CBC926F7FE19007CFD49 /* ImageScreenContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		3E32CBCA26F7FE19007CFD49 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				3E32CBCB26F7FE19007CFD49 /* ImageScreenAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		3E32CBCC26F7FE19007CFD49 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3E32CBCD26F7FE19007CFD49 /* ImageScreenPresenter.swift */,
+				3E32CBCE26F7FE19007CFD49 /* ImageScreenDataSource.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3E32CBCF26F7FE19007CFD49 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E32CBD026F7FE19007CFD49 /* ImageScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E32CBD126F7FE19007CFD49 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				3E32CBD226F7FE19007CFD49 /* ImageScreenInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		3E32CBD326F7FE19007CFD49 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3E32CBD426F7FE19007CFD49 /* ImageScreenRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		3E90DFDE26F7A19F0039FB48 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +154,8 @@
 		3E90DFE926F7A19F0039FB48 /* SwiftPiscine.Day03 */ = {
 			isa = PBXGroup;
 			children = (
+				3E90E00626F7A5B70039FB48 /* Components */,
+				3E90E00C26F7A5B70039FB48 /* Modules */,
 				3E90DFEA26F7A19F0039FB48 /* AppDelegate.swift */,
 				3E90DFEC26F7A19F0039FB48 /* SceneDelegate.swift */,
 				3E90DFEE26F7A19F0039FB48 /* ViewController.swift */,
@@ -65,6 +165,112 @@
 				3E90DFF826F7A1A50039FB48 /* Info.plist */,
 			);
 			path = SwiftPiscine.Day03;
+			sourceTree = "<group>";
+		};
+		3E90E00626F7A5B70039FB48 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3E90E00726F7A5B70039FB48 /* UITableViewComponents */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3E90E00726F7A5B70039FB48 /* UITableViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				3E90E00826F7A5B70039FB48 /* Cells */,
+				3E90E00A26F7A5B70039FB48 /* Sections */,
+				3E90E00B26F7A5B70039FB48 /* TableViewContract.swift */,
+			);
+			path = UITableViewComponents;
+			sourceTree = "<group>";
+		};
+		3E90E00826F7A5B70039FB48 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3E90E00926F7A5B70039FB48 /* Cell.swift */,
+				3E32CBC426F7FA5A007CFD49 /* CellModel.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3E90E00A26F7A5B70039FB48 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				3E90E02526F7F86F0039FB48 /* SectionModel.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		3E90E00C26F7A5B70039FB48 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3E90E00D26F7A5B70039FB48 /* Gallery */,
+				3E32CBC726F7FE19007CFD49 /* ImageScreen */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3E90E00D26F7A5B70039FB48 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				3E90E00E26F7A5B70039FB48 /* Contract */,
+				3E90E01026F7A5B70039FB48 /* Assembly */,
+				3E90E01226F7A5B70039FB48 /* Presenter */,
+				3E90E01526F7A5B70039FB48 /* View */,
+				3E90E01726F7A5B70039FB48 /* Interactor */,
+				3E90E01926F7A5B70039FB48 /* Router */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		3E90E00E26F7A5B70039FB48 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				3E90E00F26F7A5B70039FB48 /* GalleryContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		3E90E01026F7A5B70039FB48 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				3E90E01126F7A5B70039FB48 /* GalleryAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		3E90E01226F7A5B70039FB48 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3E90E01326F7A5B70039FB48 /* GalleryDataSource.swift */,
+				3E90E01426F7A5B70039FB48 /* GalleryPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3E90E01526F7A5B70039FB48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E90E01626F7A5B70039FB48 /* GalleryViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E90E01726F7A5B70039FB48 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				3E90E01826F7A5B70039FB48 /* GalleryInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		3E90E01926F7A5B70039FB48 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3E90E01A26F7A5B70039FB48 /* GalleryRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +344,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E90DFEF26F7A19F0039FB48 /* ViewController.swift in Sources */,
+				3E32CBD726F7FE19007CFD49 /* ImageScreenPresenter.swift in Sources */,
+				3E90E02626F7F86F0039FB48 /* SectionModel.swift in Sources */,
+				3E32CBD526F7FE19007CFD49 /* ImageScreenContract.swift in Sources */,
+				3E90E01C26F7A5B70039FB48 /* TableViewContract.swift in Sources */,
+				3E32CBD926F7FE19007CFD49 /* ImageScreenViewController.swift in Sources */,
+				3E90E01D26F7A5B70039FB48 /* GalleryContract.swift in Sources */,
+				3E90E02326F7A5B70039FB48 /* GalleryRouter.swift in Sources */,
+				3E90E02226F7A5B70039FB48 /* GalleryInteractor.swift in Sources */,
+				3E32CBD626F7FE19007CFD49 /* ImageScreenAssembly.swift in Sources */,
+				3E90E01B26F7A5B70039FB48 /* Cell.swift in Sources */,
+				3E32CBDB26F7FE19007CFD49 /* ImageScreenRouter.swift in Sources */,
+				3E90E01E26F7A5B70039FB48 /* GalleryAssembly.swift in Sources */,
+				3E32CBDA26F7FE19007CFD49 /* ImageScreenInteractor.swift in Sources */,
+				3E90E01F26F7A5B70039FB48 /* GalleryDataSource.swift in Sources */,
 				3E90DFEB26F7A19F0039FB48 /* AppDelegate.swift in Sources */,
+				3E90E02126F7A5B70039FB48 /* GalleryViewController.swift in Sources */,
+				3E32CBD826F7FE19007CFD49 /* ImageScreenDataSource.swift in Sources */,
+				3E32CBC526F7FA5A007CFD49 /* CellModel.swift in Sources */,
+				3E90E02026F7A5B70039FB48 /* GalleryPresenter.swift in Sources */,
 				3E90DFED26F7A19F0039FB48 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
