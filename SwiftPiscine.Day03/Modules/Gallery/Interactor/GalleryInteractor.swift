@@ -43,6 +43,11 @@ class GalleryInteractor: PresenterToInteractorGalleryProtocol {
     func saveImages(images: [UIImage]) {
         imageService.saveImages(images: images)
     }
+
+    func saveImage(image: UIImage) {
+        imageService.saveImage(image: image)
+    }
+
     func downloadImage(for url: String, complition: @escaping (UIImage?) -> Void) {
         networkService.downloadImage(for: url){ image in
             complition(image)

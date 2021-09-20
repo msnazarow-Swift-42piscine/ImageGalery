@@ -13,13 +13,14 @@ import UIKit
 protocol PresenterToViewGalleryProtocol: AnyObject {
     func reloadCollectionViewData()
     func reloatCollectionViewItems(at indexPath: [IndexPath])
+    func showAlert(with url: String)
 }
 
 
 // MARK: View Input (View -> Presenter)
 protocol ViewToPresenterGalleryProtocol: AnyObject {
     var dataSource: PresenterToDataSourceGalleryProtocol? { get }
-
+    func didSelectItemAt(_ indexPath: IndexPath)
     func viewDidLoad()
 }
 
@@ -28,13 +29,14 @@ protocol ViewToPresenterGalleryProtocol: AnyObject {
 protocol PresenterToInteractorGalleryProtocol: AnyObject {
     func getImage(for id: Int) -> UIImage?
     func saveImages(images: [UIImage])
+    func saveImage(image: UIImage)
     func downloadImages(for urls: [String], complition: @escaping ([UIImage]) -> Void)
     func downloadImage(for url: String, complition: @escaping (UIImage?) -> Void)
 }
 
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterGalleryProtocol: AnyObject {
-    
+    func routeToImageScreen(with imageId: Int)
 }
 
 // MARK: Router Input (Presenter -> DataSource)

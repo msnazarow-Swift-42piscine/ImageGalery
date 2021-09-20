@@ -1,9 +1,8 @@
 //
-//  ___FILENAME___
-//  ___PROJECTNAME___
+//  CellModel.swift
+//  SwiftPiscine.Day03
 //
-//  Created by ___FULLUSERNAME___ on ___DATE___.
-//  ___COPYRIGHT___
+//  Created by out-nazarov2-ms on 20.09.2021.
 //
 
 import Foundation

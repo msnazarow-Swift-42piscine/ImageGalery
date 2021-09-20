@@ -17,5 +17,7 @@ class GalleryRouter: PresenterToRouterGalleryProtocol {
     init(view: UIViewController) {
         self.view = view
     }
-    
+    func routeToImageScreen(with imageId: Int) {
+        view?.navigationController?.pushViewController(ImageScreenAssembly.createModule(with: imageId), animated: true)
+    }
 }

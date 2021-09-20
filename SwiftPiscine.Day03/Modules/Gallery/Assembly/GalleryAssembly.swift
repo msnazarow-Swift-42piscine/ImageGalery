@@ -12,13 +12,10 @@ enum GalleryAssembly{
     
     // MARK: Static methods
     static func createModule() -> UIViewController {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: 200, height: 200)
-        let viewController = GalleryViewController(collectionViewLayout: layout)
+        let viewController = GalleryViewController(collectionViewLayout: UICollectionViewFlowLayout())
         let router = GalleryRouter(view: viewController)
         let networkService = NetworkService()
-        let imageService = ImageService()
+        let imageService = ImageService.shared
         let interactor = GalleryInteractor(networkService: networkService, imageService: imageService)
         let dataSource = GalleryPresenterDataSource()
         let presenter = GalleryPresenter(view: viewController, interactor: interactor, router: router, dataSource: dataSource)

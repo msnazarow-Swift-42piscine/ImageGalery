@@ -16,11 +16,11 @@ class GalleryPresenter: ViewToPresenterGalleryProtocol {
     let router: PresenterToRouterGalleryProtocol?
     let dataSource: PresenterToDataSourceGalleryProtocol?
 
-    let imagesURLs = [
+    let imagesURLs: [String] = [
         "https://www.nasa.gov/sites/default/files/thumbnails/image/curiosity_selfie.jpg",
         "https://apod.nasa.gov/apod/image/2109/LDN1251Gualco.jpg",
         "https://eoimages.gsfc.nasa.gov/images/imagerecords/148000/148833/nicholas_geo5_2021257_lrg.jpg",
-        "https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia24478.jpeg"
+        "1https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia24478.jpeg"
     ]
 
     // MARK: Init
@@ -41,6 +41,9 @@ class GalleryPresenter: ViewToPresenterGalleryProtocol {
         sections.append(SectionModel(models))
         dataSource?.updateForSections(sections)
     }
+    func didSelectItemAt(_ indexPath: IndexPath) {
+        router?.routeToImageScreen(with: indexPath.row)
+    }
 }
 
 extension GalleryPresenter: PresenterToCellGalleryProtocol {
@@ -49,6 +52,14 @@ extension GalleryPresenter: PresenterToCellGalleryProtocol {
             complition(image)
         } else {
             interactor?.downloadImage(for: imagesURLs[id]) { image in
+                guard let image = image else {
+                    DispatchQueue.main.async {
+                        self.view?.showAlert(with: self.imagesURLs[id])
+                    }
+                    complition(nil)
+                    return
+                }
+                self.interactor?.saveImage(image: image)
                 complition(image)
             }
         }

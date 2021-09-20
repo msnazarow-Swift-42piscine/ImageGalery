@@ -12,7 +12,6 @@ class GalleryViewController: UICollectionViewController {
 
     // MARK: - Properties
     var presenter: ViewToPresenterGalleryProtocol?
-
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         guard let presenter = presenter else {
@@ -24,7 +23,6 @@ class GalleryViewController: UICollectionViewController {
         collectionView.delegate = self
         collectionView.register(ImageViewCell.self, forCellWithReuseIdentifier: String(describing: ImageViewCell.self))
         collectionView.backgroundColor = .white
-//        collectionView.alwaysBounceVertical = true
         setupUI()
         presenter.viewDidLoad()
     }
@@ -51,7 +49,15 @@ extension GalleryViewController: PresenterToViewGalleryProtocol{
     func reloatCollectionViewItems(at indexPath: [IndexPath]) {
         collectionView.reloadItems(at: indexPath)
     }
+
+        //TODO Не работает если ошибок больше чем одна
+    func showAlert(with url: String) {
+        let alert = UIAlertController(title: "Error", message: "Cannot access to \(url)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
 }
+
 extension GalleryViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let numberOfCellsInRow = 2
@@ -59,5 +65,8 @@ extension GalleryViewController: UICollectionViewDelegateFlowLayout {
         let totalSpace = flowlayout.sectionInset.left + flowlayout.sectionInset.right + (flowlayout.minimumInteritemSpacing * CGFloat(numberOfCellsInRow - 1))
         let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(numberOfCellsInRow))
         return CGSize(width: size, height: size)
+    }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter?.didSelectItemAt(indexPath)
     }
 }
