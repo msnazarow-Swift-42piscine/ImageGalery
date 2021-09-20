@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Cell: UITableViewCell, ModelRepresentable {
+class Cell: UICollectionViewCell, ModelRepresentable {
     weak var presenter: PresenterToCellGalleryProtocol?
 
     var model: CellIdentifiable? {

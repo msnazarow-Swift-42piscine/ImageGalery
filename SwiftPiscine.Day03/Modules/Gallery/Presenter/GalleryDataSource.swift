@@ -9,7 +9,6 @@
 import UIKit
 
 class GalleryPresenterDataSource: NSObject, PresenterToDataSourceGalleryProtocol {
-
     // MARK: Properties
     weak var presenter: PresenterToCellGalleryProtocol?
 
@@ -19,18 +18,18 @@ class GalleryPresenterDataSource: NSObject, PresenterToDataSourceGalleryProtocol
         self.sections = sections
     }
 
-    func numberOfSections(in _: UITableView) -> Int {
+    func numberOfSections(in _: UICollectionView) -> Int {
         return sections.count
     }
 
-    func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sections[section].rows.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let model = sections[indexPath.section].rows[indexPath.row]
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: model.cellIdentifier, for: indexPath) as? Cell else {
-            return UITableViewCell()
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: model.cellIdentifier, for: indexPath) as? Cell else {
+            return UICollectionViewCell()
         }
         cell.presenter = presenter
         cell.model = model

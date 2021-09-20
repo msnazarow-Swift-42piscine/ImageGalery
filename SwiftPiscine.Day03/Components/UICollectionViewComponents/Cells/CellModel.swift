@@ -9,14 +9,15 @@
 import Foundation
 
 struct Model {
-
+    let id: Int
 }
 
 struct CellModel: CellIdentifiable {
 
-    var cellIdentifier: String { return "Cell" }
+    var cellIdentifier: String { return "ImageViewCell" }
+    let id: Int
 
     init(_ property: Model) {
-
+        self.id = property.id
     }
 }
