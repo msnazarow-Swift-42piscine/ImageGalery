@@ -12,6 +12,7 @@ import UIKit
 // MARK: View Output (Presenter -> View)
 protocol PresenterToViewGalleryProtocol: AnyObject {
     func reloadCollectionViewData()
+    func reloatCollectionViewItems(at indexPath: [IndexPath])
 }
 
 
@@ -26,8 +27,9 @@ protocol ViewToPresenterGalleryProtocol: AnyObject {
 // MARK: Interactor Input (Presenter -> Interactor)
 protocol PresenterToInteractorGalleryProtocol: AnyObject {
     func getImage(for id: Int) -> UIImage?
-    func downloadImages(for urls: [String], complition: @escaping ([UIImage]) -> Void)
     func saveImages(images: [UIImage])
+    func downloadImages(for urls: [String], complition: @escaping ([UIImage]) -> Void)
+    func downloadImage(for url: String, complition: @escaping (UIImage?) -> Void)
 }
 
 // MARK: Router Input (Presenter -> Router)
@@ -42,5 +44,6 @@ protocol PresenterToDataSourceGalleryProtocol: UICollectionViewDataSource & UICo
 
 // MARK: Router Input (Presenter -> Cell)
 protocol PresenterToCellGalleryProtocol: AnyObject {
-    func getImage(for id: Int) -> UIImage?
+    func getImage(for id: Int, complition: @escaping (UIImage?) -> Void)
+    func updateItem(for id: Int)
 }

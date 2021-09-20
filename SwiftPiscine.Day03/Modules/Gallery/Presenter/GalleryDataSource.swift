@@ -12,7 +12,7 @@ class GalleryPresenterDataSource: NSObject, PresenterToDataSourceGalleryProtocol
     // MARK: Properties
     weak var presenter: PresenterToCellGalleryProtocol?
 
-    private var sections: [SectionModel] = []
+    private var sections: [SectionModel] = [SectionModel([Model(id: 0), Model(id: 1), Model(id: 2), Model(id: 3)])]
 
     func updateForSections(_ sections: [SectionModel]) {
         self.sections = sections

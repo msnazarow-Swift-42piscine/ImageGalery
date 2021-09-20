@@ -24,7 +24,7 @@ class GalleryViewController: UICollectionViewController {
         collectionView.delegate = self
         collectionView.register(ImageViewCell.self, forCellWithReuseIdentifier: String(describing: ImageViewCell.self))
         collectionView.backgroundColor = .white
-        collectionView.alwaysBounceVertical = true
+//        collectionView.alwaysBounceVertical = true
         setupUI()
         presenter.viewDidLoad()
     }
@@ -39,14 +39,17 @@ class GalleryViewController: UICollectionViewController {
     }
 
     private func setupConstraints() {
-
+        
     }
 }
 
 extension GalleryViewController: PresenterToViewGalleryProtocol{
-    // TODO: Implement View Output Methods
     func reloadCollectionViewData() {
         collectionView.reloadData()
+    }
+
+    func reloatCollectionViewItems(at indexPath: [IndexPath]) {
+        collectionView.reloadItems(at: indexPath)
     }
 }
 extension GalleryViewController: UICollectionViewDelegateFlowLayout {

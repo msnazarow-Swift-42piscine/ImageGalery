@@ -37,18 +37,24 @@ class GalleryPresenter: ViewToPresenterGalleryProtocol {
     func viewDidLoad() {
         var sections: [SectionModel] = []
         var models: [Model] = []
-        interactor?.downloadImages(for: imagesURLs, complition: { images in
-            self.interactor?.saveImages(images: images)
-            (0 ..< images.count).forEach{ models.append(Model(id: $0))}
-            sections.append(SectionModel(models))
-            self.dataSource?.updateForSections(sections)
-            self.view?.reloadCollectionViewData()
-        })
+        (0 ..< imagesURLs.count).forEach{ models.append(Model(id: $0))}
+        sections.append(SectionModel(models))
+        dataSource?.updateForSections(sections)
     }
 }
 
 extension GalleryPresenter: PresenterToCellGalleryProtocol {
-    func getImage(for id: Int) -> UIImage? {
-        interactor?.getImage(for: id)
+    func getImage(for id: Int, complition: @escaping (UIImage?) -> Void) {
+        if let image = interactor?.getImage(for: id) {
+            complition(image)
+        } else {
+            interactor?.downloadImage(for: imagesURLs[id]) { image in
+                complition(image)
+            }
+        }
+    }
+
+    func updateItem(for id: Int) {
+        view?.reloatCollectionViewItems(at: [IndexPath(item: id, section: 0)])
     }
 }

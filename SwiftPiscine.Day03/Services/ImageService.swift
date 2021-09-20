@@ -19,6 +19,7 @@ class ImageService: ImageServiceProtocol {
     }
 
     func getImage(for id: Int) -> UIImage? {
+        guard id < images.count else { return nil }
         return images[id]
     }
 }
