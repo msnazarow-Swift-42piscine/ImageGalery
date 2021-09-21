@@ -40,12 +40,12 @@ class GalleryInteractor: PresenterToInteractorGalleryProtocol {
         return imageService.getImage(for: id)
     }
 
-    func saveImages(images: [UIImage]) {
-        imageService.saveImages(images: images)
-    }
+//    func saveImages(images: [UIImage]) {
+//        imageService.saveImages(images: images)
+//    }
 
-    func saveImage(image: UIImage) {
-        imageService.saveImage(image: image)
+    func saveImage(for id: Int, image: UIImage) {
+        imageService.saveImage(for: id, image: image)
     }
 
     func downloadImage(for url: String, complition: @escaping (UIImage?) -> Void) {

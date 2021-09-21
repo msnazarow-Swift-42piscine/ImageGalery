@@ -59,13 +59,13 @@ extension GalleryPresenter: PresenterToCellGalleryProtocol {
                     complition(nil)
                     return
                 }
-                self.interactor?.saveImage(image: image)
+                self.interactor?.saveImage(for: id, image: image)
                 complition(image)
             }
         }
     }
 
     func updateItem(for id: Int) {
-        view?.reloatCollectionViewItems(at: [IndexPath(item: id, section: 0)])
+        view?.reloadCollectionViewItems(at: [IndexPath(item: id, section: 0)])
     }
 }

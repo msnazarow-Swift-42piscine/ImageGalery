@@ -46,7 +46,7 @@ extension GalleryViewController: PresenterToViewGalleryProtocol{
         collectionView.reloadData()
     }
 
-    func reloatCollectionViewItems(at indexPath: [IndexPath]) {
+    func reloadCollectionViewItems(at indexPath: [IndexPath]) {
         collectionView.reloadItems(at: indexPath)
     }
 
