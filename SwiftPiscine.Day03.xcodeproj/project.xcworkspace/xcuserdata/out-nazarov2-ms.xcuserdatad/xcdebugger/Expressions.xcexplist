@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ImageViewCell.updateViews():ImageViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "imageView.image">
+            </PersistentString>
+            <PersistentString
+               value = "presenter">
+            </PersistentString>
+            <PersistentString
+               value = "url.path">
+            </PersistentString>
+            <PersistentString
+               value = "url.dataRepresentation">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GalleryPresenterDataSource.collectionView(_:cellForItemAt:):GalleryDataSource.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "presenter">
+            </PersistentString>
+            <PersistentString
+               value = "(cell as! ImageViewCell).imageView.image">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ImageScreenViewController.setImage(for:):ImageScreenViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "view.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ImageScreenPresenter.viewDidLoad():ImageScreenPresenter.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "imageService?.getImage(for: imageId)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ImageService.getImage(for:):ImageService.swift">
+      </ContextState>
+      <ContextState
+         contextName = "GalleryPresenterDataSource.updateForSections(_:):GalleryDataSource.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in GalleryPresenter.viewDidLoad():GalleryPresenter.swift">
+      </ContextState>
+      <ContextState
+         contextName = "GalleryPresenterDataSource.collectionView(_:numberOfItemsInSection:):GalleryDataSource.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ImageScreenViewController.updateMinZoomScaleForSize(_:):ImageScreenViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.view.frame">
+            </PersistentString>
+            <PersistentString
+               value = "imageView.image!.size">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ImageService.saveImage(for:image:):ImageService.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
