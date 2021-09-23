@@ -9,7 +9,7 @@ import UIKit
 
 protocol ImageServiceProtocol {
     func getImage(for id: Int) -> UIImage?
-//    func saveImages(images: [UIImage])
+    func saveImages(images: [UIImage])
     func saveImage(for id: Int, image: UIImage)
 }
 
@@ -19,13 +19,12 @@ class ImageService: ImageServiceProtocol {
     static let shared = ImageService()
 
     private init() {}
-    
-//    func saveImages(images: [UIImage]) {
-//        self.images = images
-//    }
+
+    func saveImages(images: [UIImage]) {
+        images.enumerated().forEach { self.images[$0.offset] = $0.element }
+    }
 
     func getImage(for id: Int) -> UIImage? {
-//        guard id < images.count else { return nil }
         return images[id]
     }
 

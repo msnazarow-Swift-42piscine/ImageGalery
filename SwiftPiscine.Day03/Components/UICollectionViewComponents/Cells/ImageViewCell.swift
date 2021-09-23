@@ -38,10 +38,11 @@ class ImageViewCell: Cell {
         ])
     }
 
-    required init?(coder: NSCoder) {
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func updateViews() {
         guard let model = model as? CellModel else { return }
         presenter?.getImage(for: model.id) { image in

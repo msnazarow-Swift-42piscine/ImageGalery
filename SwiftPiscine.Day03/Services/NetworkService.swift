@@ -8,7 +8,7 @@
 import UIKit
 
 protocol NetworkServiceProtocol {
-   func downloadImage(for url: String, complition: @escaping (UIImage?) -> Void)
+    func downloadImage(for url: String, complition: @escaping (UIImage?) -> Void)
 }
 
 class NetworkService: NetworkServiceProtocol {
@@ -17,7 +17,7 @@ class NetworkService: NetworkServiceProtocol {
             complition(nil)
             return
         }
-        URLSession.shared.dataTask(with: url) { (data, _, error) in
+        URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data, error == nil else {
                 complition(nil)
                 return

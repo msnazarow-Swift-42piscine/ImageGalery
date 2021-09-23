@@ -7,5 +7,9 @@
 
 import UIKit
 
-let verticalTranslation = UIApplication.shared.statusBarOrientation.isPortrait ? UIScreen.main.bounds.height / 844.0 : UIScreen.main.bounds.height / 390.0
-let horisontalTranslation = UIApplication.shared.statusBarOrientation.isPortrait ? UIScreen.main.bounds.width / 390.0 : UIScreen.main.bounds.width / 844.0
+let verticalTranslation = !UIWindow.isLandscape ?
+                            UIScreen.main.bounds.height / 844.0 :
+                            UIScreen.main.bounds.height / 390.0
+let horisontalTranslation = !UIWindow.isLandscape ?
+                            UIScreen.main.bounds.width / 390.0 :
+                            UIScreen.main.bounds.width / 844.0

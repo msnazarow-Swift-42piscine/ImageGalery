@@ -3,7 +3,7 @@
 //  SwiftPiscine.Day03
 //
 //  Created by out-nazarov2-ms on 19.09.2021.
-//  
+//
 //
 
 import UIKit
@@ -49,7 +49,7 @@ class GalleryInteractor: PresenterToInteractorGalleryProtocol {
     }
 
     func downloadImage(for url: String, complition: @escaping (UIImage?) -> Void) {
-        networkService.downloadImage(for: url){ image in
+        networkService.downloadImage(for: url) { image in
             complition(image)
         }
     }

@@ -3,16 +3,23 @@
 //  SwiftPiscine.Day03
 //
 //  Created by out-nazarov2-ms on 20.09.2021.
-//  
+//
 //
 
 import UIKit
 
 class ImageScreenViewController: UIViewController {
-
     // MARK: - Properties
+
     var presenter: ViewToPresenterImageScreenProtocol?
-    let scrollView = UIScrollView(frame: UIScreen.main.bounds)
+
+    lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView(frame: UIScreen.main.bounds)
+        scrollView.delegate = self
+        scrollView.bounces = false
+        scrollView.backgroundColor = .white
+        return scrollView
+    }()
 
     let imageView: UIImageView = {
         let imageView = UIImageView()
@@ -20,28 +27,26 @@ class ImageScreenViewController: UIViewController {
         return imageView
     }()
 
+    // MARK: - Lifecycle Methods
+
     override func loadView() {
-        scrollView.backgroundColor = .green
-        scrollView.delegate = self
-        scrollView.bounces = false
-        self.view = scrollView
+        view = scrollView
     }
 
-    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         presenter?.viewDidLoad()
     }
 
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    override func viewWillTransition(to size: CGSize, with _: UIViewControllerTransitionCoordinator) {
         updateMinZoomScaleForSize(size)
     }
 
     private func updateMinZoomScaleForSize(_ size: CGSize) {
-
+        guard let image = imageView.image else { return }
         let widthScale = size.width / imageView.bounds.width
-        scrollView.contentSize = imageView.image!.size
+        scrollView.contentSize = image.size
         scrollView.minimumZoomScale = widthScale
         scrollView.maximumZoomScale = max(2, widthScale)
         scrollView.zoomScale = widthScale
@@ -56,25 +61,18 @@ class ImageScreenViewController: UIViewController {
         view.addSubview(imageView)
     }
 
-    private func setupConstraints() {
-//        NSLayoutConstraint.activate([
-//            imageView.topAnchor.constraint(equalTo: view.topAnchor),
-//            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-//            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-//            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-//        ])
-    }
+    private func setupConstraints() {}
 }
 
 extension ImageScreenViewController: UIScrollViewDelegate {
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+    func viewForZooming(in _: UIScrollView) -> UIView? {
         imageView
     }
 }
 
-extension ImageScreenViewController: PresenterToViewImageScreenProtocol{
+extension ImageScreenViewController: PresenterToViewImageScreenProtocol {
     func setImage(for image: UIImage) {
-        self.imageView.image = image
+        imageView.image = image
         imageView.frame = CGRect(origin: CGPoint(), size: image.size)
         scrollView.contentSize = image.size
         updateMinZoomScaleForSize(scrollView.bounds.size)
